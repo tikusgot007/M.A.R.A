@@ -1,0 +1,79 @@
+# Credentials & secrets - JANGAN push ke GitHub
+.env
+.env.lock
+auth.json
+auth.lock
+
+# Session & state - lokal per PC
+sessions/
+cache/
+logs/
+*.db
+*.log
+state.db
+
+# Lock files
+*.lock
+.locks/
+locks/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Temporary & build
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# IDE & editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Hermes internal - tidak perlu sync
+bootstrap-cache/
+.curator_backups/
+.install_id.lock
+.hermes-update-in-progress.lock
+.skills_prompt_snapshot.json
+hermes-setup.exe
+bot_relay/
+desktop-plugins/
+desktop/
+attachments/
+audio_cache/
+image_cache/
+backups/
+bin/
+cron/
+hooks/
+installs/
+composer-pastes/
+# Hermes internal state - lokal per PC
+state.db-shm
+state.db-wal
+shared-state.db-shm
+shared-state.db-wal
+state/
+pending/
+runtime/
+source-checks/
+telemetry/
+spawn-ledger.json
+processes.json
+models_dev_cache.*
+provider_models_cache.*
+hermes-agent/ 
+install_id
+tools/
