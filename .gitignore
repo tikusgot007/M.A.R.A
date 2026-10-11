@@ -77,3 +77,6 @@ provider_models_cache.*
 hermes-agent/ 
 install_id
 tools/
+
+# PC backups
+.backup*/

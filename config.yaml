@@ -72,7 +72,7 @@ plugins:
 model:
   # Default model to use (can be overridden with --model flag)
   # Both "default" and "model" work as the key name here.
-  default: "deepseek-flash"
+  default: "aan-hermes"
 
   # Inference provider selection:
   #   "auto"         - Auto-detect from credentials (default)
@@ -105,11 +105,11 @@ model:
   #   It works with both no-auth and auth-enabled server modes.
   #
   # Can also be overridden for a single invocation with the --provider flag.
-  provider: "deepseek"
+  provider: "aan-route"
 
   # API configuration (falls back to OPENROUTER_API_KEY env var)
   # api_key: "your-key-here"  # Uncomment to set here instead of .env
-  base_url: "https://api.deepseek.com/v1"
+  base_url: "http://localhost:20128/v1"
 
   # Stream API responses from the provider (default: true). The agent core
   # prefers streaming for every turn — subagents included — for liveness
@@ -400,6 +400,7 @@ model:
 # back to the original implementer, or escalate a genuine external blocker.
 # Disable this only when every review is performed manually from the dashboard.
   api_mode: chat_completions
+  key_env: HERMES_CUSTOM_AAN_ROUTE_API_KEY
 kanban:
   review_dispatch: true
 
@@ -619,6 +620,7 @@ browser:
 # opt-in for interactive CLI/TUI/Desktop/ACP sessions, but default on for unattended
 # gateway/cron sessions where nobody is present to interrupt a model that
 # ignores loop warnings.
+  use_real_profile: true
 tool_loop_guardrails:
   warnings_enabled: true
   hard_stop_enabled: false
@@ -2374,3 +2376,49 @@ updates:
 onboarding:
   seen:
     profile_build_offered: true
+command_allowlist:
+  - execute_code
+providers:
+  aan-route:
+    name: 9route
+    base_url: http://localhost:20128/v1
+    model: aan-hermes
+    discover_models: true
+    models:
+      aan-claude: {}
+      aan-deepseek: {}
+      khusu-claude-code: {}
+      aan-hermes: {}
+      ds/deepseek-v4-pro: {}
+      ds/deepseek-v4-pro-max: {}
+      ds/deepseek-v4-pro-none: {}
+      ds/deepseek-v4-flash: {}
+      ds/deepseek-v4-flash-vision-exp: {}
+      ds/deepseek-chat: {}
+      ds/deepseek-reasoner: {}
+      cc/claude-opus-5-5: {}
+      cc/claude-opus-5: {}
+      cc/claude-sonnet-5-5: {}
+      cc/claude-sonnet-5: {}
+      cc/claude-haiku-4-5-20251001: {}
+      ag/gemini-3.8-flash-high: {}
+      ag/gemini-3.8-flash-medium: {}
+      ag/gemini-3.8-flash-low: {}
+      ag/gemini-3.8-flash: {}
+      ag/gemini-3.7-flash-high: {}
+      ag/gemini-3.7-flash-medium: {}
+      ag/gemini-3.7-flash-low: {}
+      ag/gemini-3.6-flash-high: {}
+      ag/gemini-3.6-flash-medium: {}
+      ag/gemini-3.6-flash-low: {}
+      ag/gemini-3.5-flash-high: {}
+      ag/gemini-3-flash-agent: {}
+      ag/gemini-3.5-flash-low: {}
+      ag/gemini-3.5-flash-extra-low: {}
+      ag/gemini-pro-agent: {}
+      ag/gemini-3.1-pro-low: {}
+      ag/claude-sonnet-4-6: {}
+      ag/claude-opus-4-6-thinking: {}
+      ag/gpt-oss-120b-medium: {}
+      ag/gemini-3-flash: {}
+    key_env: HERMES_CUSTOM_AAN_ROUTE_API_KEY
