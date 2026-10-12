@@ -2,12 +2,19 @@
 
 Prinsip: bangun kecil dulu, tiap tahap harus bisa dites. M.A.R.A tidak menyentuh kode AuliaPos sampai tahap paling akhir (dan itu butuh approval, karena cross-repo).
 
-Status: urutan tahap **disetujui** (2026-10-12). Belum digarap.
+Status (2026-10-12): urutan tahap **disetujui**. **Tahap 0 selesai**; Tahap 1 belum digarap.
+
+## Tahap 0 — Fondasi platform (SELESAI 2026-10-12)
+- Hermes Agent v0.21.7 terpasang di `aulia7` (`C:\Users\ops\AppData\Local\hermes`).
+- Provider **Gemini**, model `gemini-3.6-flash`; `.env` berisi kunci Gemini + token bot Telegram M.A.R.A.
+- **Telegram bot** jalan (gateway polling, auto-start Task Scheduler `Hermes_Gateway`).
+- **Web dashboard** jalan: `http://192.168.1.68:9119`, user `aan` (Task Scheduler `MARA_Dashboard`).
+- Catatan rinci di `MEMORY.md`.
 
 ## Prasyarat
-- PC `aulia7` siap: runtime (Node/Python), kredensial **Telegram bot**, kunci **API model cloud**.
-- Akses **read-only** ke `aulia_inboxdb` (AuliaPos).
-- Store M.A.R.A: SQLite + folder `memories/` & `skills/` gaya Hermes.
+- PC `aulia7` siap: runtime (Node/Python), kredensial **Telegram bot**, kunci **API model cloud**. — ✅ terpenuhi (Tahap 0).
+- Akses **read-only** ke `aulia_inboxdb` (AuliaPos). — ⏳ belum.
+- Store M.A.R.A: SQLite + folder `memories/` & `skills/` gaya Hermes. — ⏳ belum diisi.
 
 ## Tahap 1 — Fondasi baca (tanpa AI)
 - Konektor read-only ke `aulia_inboxdb`.

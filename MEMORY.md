@@ -152,6 +152,7 @@ Keputusan sejauh ini:
 - Fokus awal: **cluster A (kelengkapan order), B (kecepatan & mutu balas), C (kabar & follow-up)**. Terbuka untuk berkembang lebih luas (D/produksi/pembayaran) nanti.
 - Bahasan berikutnya: **aspek teknis M.A.R.A** (otak AI, penyimpanan pengetahuan, loop belajar & konfirmasi ke AAN).
 - **Rencana membangun bertahap** (5 tahap) ada di `ideas/mara-cara-membangun.md`. Urutan tahap **disetujui** (1→2→3→4→5).
+- **Tahap 0 (fondasi platform) SELESAI 2026-10-12**: Hermes + Gemini + Telegram + dashboard jalan di aulia7. Tahap 1 (baca `aulia_inboxdb`) belum digarap.
 
 ### Konsep inti: AI yang belajar dari pengalaman
 - Info wajib antar jenis layanan **tidak uniform** → jangan hardcode di awal.
