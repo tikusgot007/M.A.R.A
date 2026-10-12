@@ -1,3 +1,0 @@
-User's LAN 192.168.1.0/24 (user's own host: 192.168.1.85 via Wi-Fi). There is a Windows PC named aulia-dp1 at 192.168.1.134 — SMB/RPC open (445/139/135), RDP (3389) closed.
-§
-Setup Aan: 3 PC — 1 di rumah (Windows, user AANPCWIN11Lite, Hermes desktop) + 2 di toko. 9Router v0.5.95 di port 20128 dipakai sebagai gateway model (combo 'free-all'). Di PC ini 9Router juga jalan (127.0.0.1:20128) tapi Hermes masih diarahkan ke DeepSeek langsung.
